@@ -1,0 +1,340 @@
+/* Keep this file intentionally small; lean on Bootstrap for most styling. */
+
+body {
+  background: #f6f8fc;
+  color: #14213d;
+  line-height: 1.5;
+}
+
+.jsonPreview {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+    'Courier New', monospace;
+  font-size: 0.875rem;
+  line-height: 1.35;
+  white-space: pre;
+  overflow: auto;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  background: #ffffff;
+}
+
+.jsonPreview:focus-visible {
+  outline: 2px solid #0d6efd; /* Bootstrap primary */
+  outline-offset: 2px;
+}
+
+.appShell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.appHeader {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: saturate(140%) blur(4px);
+}
+
+.appHeader .nav-link {
+  color: #334155;
+}
+
+.appHeader .nav-link.active {
+  color: #1d4ed8;
+  font-weight: 600;
+}
+
+.appFooter {
+  background: #fff;
+}
+
+.heroSurface {
+  background: linear-gradient(135deg, #ffffff 0%, #f4f7ff 100%);
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(20, 33, 61, 0.06);
+}
+
+.showcaseSection {
+  margin-bottom: 2rem;
+}
+
+.sectionHeader {
+  margin-bottom: 0.95rem;
+}
+
+.sectionTitle {
+  margin-bottom: 0.25rem;
+  font-size: 1.28rem;
+  font-weight: 650;
+  color: #0f172a;
+}
+
+.sectionSubtitle {
+  color: #475569;
+  max-width: 90ch;
+}
+
+.showcaseCard {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.9rem;
+  box-shadow: 0 6px 20px rgba(20, 33, 61, 0.04);
+}
+
+.showcaseCardHeader {
+  padding: 0.9rem 1rem 0.8rem;
+}
+
+.showcaseCardBody {
+  padding: 1rem;
+}
+
+.kpiCard {
+  border-color: #dbe5f1;
+}
+
+.kpiCardBody {
+  padding: 1rem 1rem 0.95rem;
+}
+
+.kpiTitle {
+  font-size: 0.78rem;
+  color: #64748b;
+  margin-bottom: 0.35rem;
+  letter-spacing: 0.02em;
+}
+
+.kpiValue {
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.2;
+  margin-bottom: 0.35rem;
+}
+
+.kpiHint {
+  font-size: 0.82rem;
+  color: #475569;
+  line-height: 1.35;
+}
+
+.filterCard {
+  border-color: #d7e2ef;
+}
+
+.summaryStrip .badge {
+  font-weight: 500;
+  color: #334155 !important;
+}
+
+.chartPlaceholder {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  border: 1px dashed #cbd5e1;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  padding: 1rem;
+}
+
+.placeholderGrid {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(to right, rgba(148, 163, 184, 0.2) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.2) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.45;
+}
+
+.placeholderLine {
+  position: absolute;
+  left: 6%;
+  right: 6%;
+  top: 58%;
+  height: 3px;
+  border-radius: 99px;
+  background: linear-gradient(
+    90deg,
+    #00a6fb 0%,
+    #2dc653 24%,
+    #ff9f1c 48%,
+    #f45b69 72%,
+    #7b2cbf 100%
+  );
+  transform: rotate(-3deg);
+}
+
+.visuallyHidden,
+.visuallyHidden.focusable:focus {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  border: 0 !important;
+}
+
+.chartSkeleton,
+.skeletonLine {
+  border-radius: 0.5rem;
+}
+
+.chartSkeleton {
+  position: relative;
+  overflow: hidden;
+  border: 1px dashed rgba(148, 163, 184, 0.6);
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  padding: 1rem;
+}
+
+.chartSkeletonGrid {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+      to right,
+      rgba(148, 163, 184, 0.25) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.25) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.7;
+}
+
+.chartSkeletonLine {
+  position: absolute;
+  left: 6%;
+  right: 6%;
+  top: 58%;
+  height: 3px;
+  border-radius: 99px;
+  background: linear-gradient(
+    90deg,
+    #00a6fb 0%,
+    #2dc653 24%,
+    #ff9f1c 48%,
+    #f45b69 72%,
+    #7b2cbf 100%
+  );
+  transform: rotate(-3deg);
+  opacity: 0.5;
+}
+
+.skeletonLine {
+  background: rgba(148, 163, 184, 0.3);
+}
+
+.skeletonTitle {
+  width: 55%;
+  height: 14px;
+  margin-bottom: 12px;
+}
+
+.skeletonValue {
+  width: 70%;
+  height: 24px;
+  margin-bottom: 12px;
+}
+
+.skeletonHint {
+  width: 85%;
+  height: 12px;
+}
+
+.textTruncateOneLine {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tableVideoTitle {
+  max-width: 360px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.35;
+}
+
+.tableChannelName {
+  max-width: 180px;
+}
+
+.rankingList {
+  list-style: none;
+}
+
+.rankingItem .progress {
+  height: 0.56rem;
+  background-color: #e7eef8;
+}
+
+.rankingItem .progress-bar {
+  background: linear-gradient(90deg, #2563eb 0%, #0ea5e9 70%, #22c55e 100%);
+}
+
+.rankingLabel {
+  color: #1e293b;
+  max-width: 78%;
+}
+
+.rankingValue {
+  color: #0f172a;
+}
+
+.showcaseTable {
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.showcaseTable thead th {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #475569;
+  border-bottom: 1px solid #d7e2ef;
+  background: #f8fafc;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.showcaseTable tbody td {
+  padding-top: 0.65rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid #eef2f7;
+  vertical-align: top;
+}
+
+.showcaseTable tbody tr:hover {
+  background: #f8fbff;
+}
+
+.insightMetricValue {
+  max-width: 100%;
+}
+
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+.form-select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+@media (max-width: 992px) {
+  .sectionTitle {
+    font-size: 1.16rem;
+  }
+
+  .showcaseCardBody {
+    padding: 0.9rem;
+  }
+
+  .tableVideoTitle {
+    max-width: 260px;
+  }
+}
+
