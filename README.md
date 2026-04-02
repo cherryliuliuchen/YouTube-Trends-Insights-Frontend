@@ -36,7 +36,7 @@ It also includes a **Dev Test** route for backend connectivity and payload inspe
 
 ### Snapshot Overview (KPI + Ranking)
 
-![Snapshot Overview](docs/images/Snap2.jpg)
+![Snapshot Overview](docs/images/snap2.jpg)
 
 - Snapshot KPI cards for quick orientation
 - Ranked snapshot view powered by `/api/charts/bar`
@@ -69,7 +69,7 @@ npm install
 npm run dev
 ```
 
-Open the local URL printed in terminal (usually `http://localhost:5173`).
+Open the local URL printed in terminal .
 
 ## Available Scripts
 
@@ -93,7 +93,7 @@ Serves the production build locally for verification.
 
 ## Backend Connectivity
 
-- Default backend base URL: `http://127.0.0.1:8001`
+- Default backend base URL: `{base URL}`
 - Optional override: set `VITE_API_BASE_URL` in `.env`
 
 Core API endpoints used by this frontend:
@@ -107,7 +107,7 @@ Core API endpoints used by this frontend:
 Example `.env`:
 
 ```bash
-VITE_API_BASE_URL=http://127.0.0.1:8001
+VITE_API_BASE_URL=`{base URL}`
 ```
 
 ## Project Structure
